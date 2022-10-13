@@ -1,0 +1,10 @@
+using UnityEngine;
+using System.Collection;
+
+public class TitleUIController : MonoBehaviour
+{
+    public void SetScene(string SceneName)
+    {
+        Application.LoadLevel(sceneName);
+    }
+}
