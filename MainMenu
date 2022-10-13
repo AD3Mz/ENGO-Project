@@ -1,0 +1,37 @@
+usnig System.Collection;
+usnig.System.Collection.Generic;
+usnig.UnityEngine;
+usnig.UnityEngine.SceneManagement;
+
+
+public class Menu : MonoBehaviour
+{
+    public GameObject Option;
+    public GameObject HowToPlay;
+
+
+    public void PlayGame()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+    public void Option()
+    {
+        Option.SetActive(true);
+        HowToPlay.SetActive(false);
+    }
+    public void HowToPlay()
+    {
+        Option.SetActive(false);
+        HowToPlay.SetActive(true);
+    }
+    public void CloseAll()
+    {
+        Option.SetActive(false);
+        HowToPlay.SetActive(false);
+    }
+    public void QuitGame()
+    {
+        Debug.Log("QUIT");
+        Application.Quit();
+    }
+}
