@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collection;
 
-public class TitleUIController : MonoBehaviour
+public class TitleMenu : MonoBehaviour
 {
     public void SetScene(string SceneName)
     {
