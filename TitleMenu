@@ -1,10 +1,10 @@
 using UnityEngine;
-using System.Collection;
+using System.Collections;
 
-public class TitleMenu : MonoBehaviour
+public class TitleScene : MonoBehaviour
 {
-    public void SetScene(string SceneName)
+    public void SetScene(string MainMenu)
     {
-        Application.LoadLevel(sceneName);
+        Application.LoadLevel(MainMenu);
     }
 }
