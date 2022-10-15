@@ -1,37 +1,36 @@
-usnig System.Collection;
-usnig.System.Collection.Generic;
-usnig.UnityEngine;
-usnig.UnityEngine.SceneManagement;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
-
-public class Menu : MonoBehaviour
+public class MenuManager : MonoBehaviour
 {
-    public GameObject Option;
-    public GameObject HowToPlay;
+    public GameObject OpPanel;
+    public GameObject HowPanel;
+    public GameObject CrPanel;
 
+    public void showOptionsPanel()
+    {
+        OpPanel.SetActive(true);
+        HowPanel.SetActive(false);
+        CrPanel.SetActive(false);
+    }
+    public void showHowToPanel()
+    {
+        OpPanel.SetActive(false);
+        HowPanel.SetActive(true);
+        CrPanel.SetActive(false);
+    }
+    public void showCreditsPanel()
+    {
+        OpPanel.SetActive(false);
+        HowPanel.SetActive(false);
+        CrPanel.SetActive(true);
+    }
 
-    public void PlayGame()
+    public void CloseAllPanel()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-    }
-    public void Option()
-    {
-        Option.SetActive(true);
-        HowToPlay.SetActive(false);
-    }
-    public void HowToPlay()
-    {
-        Option.SetActive(false);
-        HowToPlay.SetActive(true);
-    }
-    public void CloseAll()
-    {
-        Option.SetActive(false);
-        HowToPlay.SetActive(false);
-    }
-    public void QuitGame()
-    {
-        Debug.Log("QUIT");
-        Application.Quit();
+        OpPanel.SetActive(false);
+        HowPanel.SetActive(false);
+        CrPanel.SetActive(false);
     }
 }
